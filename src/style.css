@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #00bcd4;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #333;
+}
+
+.App {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Search {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Search-input {
+    font-size: 1.5rem;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #4caf50;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: transparent;
+}
+
+.Search-button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease,
+        transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Search-button:hover {
+    background-color: #388e3c;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.Search-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.Search-button:hover:before {
+    transform: scaleX(1);
+}
+
+.Forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.Forecast-item {
+    background-color: #e0f7fa;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: calc(100% / 3 - 20px);
+    box-sizing: border-box;
+}
+
+.Forecast-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Forecast-item img {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+.Forecast-item-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Forecast-item-desc {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.Forecast-item-temp {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 991px) {
+    .Forecast-item {
+        width: calc(100% / 2 - 20px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .Forecast-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Animation for weather info */
+.weather-info {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.weather-info h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.weather-info img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.weather-info h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.weather-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add some style to the loading text */
+.loading {
+    font-size: 1.2rem;
+    color: #888;
+    text-align: center;
+}
